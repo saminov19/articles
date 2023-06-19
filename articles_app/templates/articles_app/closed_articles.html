@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Closed Articles</h1>
+  {% if user.is_authenticated %}
+    {% for article in articles %}
+      <h2>{{ article.title }}</h2>
+      <p>{{ article.content }}</p>
+      <p>Author: {{ article.author }}</p>
+      <hr>
+    {% empty %}
+      <p>No closed articles found.</p>
+    {% endfor %}
+  {% else %}
+    <p>You must be logged in to view closed articles.</p>
+  {% endif %}
+{% endblock %}

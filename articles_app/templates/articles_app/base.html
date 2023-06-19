@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Django App</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/public_articles/">Public Articles</a></li>
+        <li><a href="/closed_articles/">Closed Articles</a></li>
+        <li><a href="/create_article/">Create Article</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+  
+  <footer>
+  </footer>
+</body>
+</html>
